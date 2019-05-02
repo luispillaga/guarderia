@@ -72,5 +72,111 @@ public class Guarderia implements Serializable{
 	
 	@OneToMany(mappedBy="guarderia", fetch=FetchType.LAZY)
 	private List<Resena> resenas;
-	
+
+	public Guarderia() {
+	}
+
+	public Integer getIdguarderia() {
+		return idguarderia;
+	}
+
+	public void setIdguarderia(Integer idguarderia) {
+		this.idguarderia = idguarderia;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Direccion getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
+	}
+
+	public List<Nivel> getNiveles() {
+		return niveles;
+	}
+
+	public void setNiveles(List<Nivel> niveles) {
+		this.niveles = niveles;
+	}
+
+	public List<Servicio> getServicios() {
+		return servicios;
+	}
+
+	public void setServicios(List<Servicio> servicios) {
+		this.servicios = servicios;
+	}
+
+	public List<Actividad> getActividades() {
+		return actividades;
+	}
+
+	public void setActividades(List<Actividad> actividades) {
+		this.actividades = actividades;
+	}
+
+	public List<Horario> getHorarios() {
+		return horarios;
+	}
+
+	public void setHorarios(List<Horario> horarios) {
+		this.horarios = horarios;
+	}
+
+	public List<Galeria> getGalerias() {
+		return galerias;
+	}
+
+	public void setGalerias(List<Galeria> galerias) {
+		this.galerias = galerias;
+	}
+
+	public List<Reserva> getReservas() {
+		return reservas;
+	}
+
+	public void setReservas(List<Reserva> reservas) {
+		this.reservas = reservas;
+	}
+
+	public List<Social> getSociales() {
+		return sociales;
+	}
+
+	public void setSociales(List<Social> sociales) {
+		this.sociales = sociales;
+	}
+
+	public List<Resena> getResenas() {
+		return resenas;
+	}
+
+	public void setResenas(List<Resena> resenas) {
+		this.resenas = resenas;
+	}
 }
