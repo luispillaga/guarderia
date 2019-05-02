@@ -27,3 +27,14 @@ HELP.md
 
 ### VS Code ###
 .vscode/
+
+### Proyecto ###
+.DS_Store
+src/.DS_Store
+src/main/.DS_Store
+src/main/java/.DS_Store
+src/main/java/com/.DS_Store
+src/main/java/com/guarderia/.DS_Store
+src/main/java/com/guarderia/app/.DS_Store
+src/main/java/com/guarderia/app/web/.DS_Store
+src/main/java/com/guarderia/app/web/models/.DS_Store

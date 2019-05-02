@@ -83,5 +83,11 @@ public class Nivel implements Serializable {
 		this.precio = precio;
 	}
 
-	
+	public Guarderia getGuarderia() {
+		return guarderia;
+	}
+
+	public void setGuarderia(Guarderia guarderia) {
+		this.guarderia = guarderia;
+	}
 }

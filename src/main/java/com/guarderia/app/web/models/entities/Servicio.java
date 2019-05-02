@@ -81,8 +81,12 @@ public class Servicio implements Serializable{
 	public void setIcono(String icono) {
 		this.icono = icono;
 	}
-	
-	
-	
 
+	public Guarderia getGuarderia() {
+		return guarderia;
+	}
+
+	public void setGuarderia(Guarderia guarderia) {
+		this.guarderia = guarderia;
+	}
 }

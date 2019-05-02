@@ -57,5 +57,11 @@ public class Galeria  implements Serializable {
 		this.imagen = imagen;
 	}
 
-	
+	public Guarderia getGuarderia() {
+		return guarderia;
+	}
+
+	public void setGuarderia(Guarderia guarderia) {
+		this.guarderia = guarderia;
+	}
 }

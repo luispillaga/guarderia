@@ -1,16 +1,9 @@
 package com.guarderia.app.web.models.entities;
 
 import java.io.Serializable;
+import java.util.Calendar;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
@@ -34,12 +27,14 @@ public class Horario implements Serializable {
 	private String dia;
 	
 	@Column(name = "HORAAPERTURA")
+	@Temporal(TemporalType.TIME)
 	@Min(value = 1)
-	private Integer horaapertura;
+	private Calendar horaapertura;
 	
 	@Column(name = "HORACIERRE")
+	@Temporal(TemporalType.TIME)
 	@Min(value = 1)
-	private Integer horacierre;
+	private Calendar horacierre;
 	
 	@JoinColumn(name="IDGUARDERIA", referencedColumnName = "IDGUARDERIA")//claves foraneas
 	@ManyToOne
@@ -76,22 +71,27 @@ public class Horario implements Serializable {
 		this.dia = dia;
 	}
 
-	public Integer getHoraapertura() {
+	public Calendar getHoraapertura() {
 		return horaapertura;
 	}
 
-	public void setHoraapertura(Integer horaapertura) {
+	public void setHoraapertura(Calendar horaapertura) {
 		this.horaapertura = horaapertura;
 	}
 
-	public Integer getHoracierre() {
+	public Calendar getHoracierre() {
 		return horacierre;
 	}
 
-	public void setHoracierre(Integer horacierre) {
+	public void setHoracierre(Calendar horacierre) {
 		this.horacierre = horacierre;
 	}
-	
 
+	public Guarderia getGuarderia() {
+		return guarderia;
+	}
 
+	public void setGuarderia(Guarderia guarderia) {
+		this.guarderia = guarderia;
+	}
 }
