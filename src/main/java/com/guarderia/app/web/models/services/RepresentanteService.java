@@ -3,9 +3,11 @@ package com.guarderia.app.web.models.services;
 import com.guarderia.app.web.models.dao.IRepresentanteDAO;
 import com.guarderia.app.web.models.entities.Representante;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class RepresentanteService implements IRepresentanteService {
     @Autowired
     private IRepresentanteDAO dao;

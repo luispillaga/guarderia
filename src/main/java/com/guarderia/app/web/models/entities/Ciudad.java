@@ -39,7 +39,7 @@ public class Ciudad implements Serializable {
 	private Provincia provincia;
 	
 	
-	@OneToMany(mappedBy="direccion", fetch= FetchType.LAZY)
+	@OneToMany(mappedBy="ciudad", fetch= FetchType.LAZY)
 	private List<Direccion> direcciones;
 	
 

@@ -3,9 +3,11 @@ package com.guarderia.app.web.models.services;
 import com.guarderia.app.web.models.dao.IBabySisterDAO;
 import com.guarderia.app.web.models.entities.BabySister;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class BabySisterService implements IBabySisterService {
     @Autowired
     private IBabySisterDAO dao;

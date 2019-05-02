@@ -2,9 +2,9 @@ package com.guarderia.app.web.models.entities;
 
 import java.io.Serializable;
 import java.util.Calendar;
+import java.util.Date;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -28,13 +28,11 @@ public class Horario implements Serializable {
 	
 	@Column(name = "HORAAPERTURA")
 	@Temporal(TemporalType.TIME)
-	@Min(value = 1)
-	private Calendar horaapertura;
+	private Date horaapertura;
 	
 	@Column(name = "HORACIERRE")
 	@Temporal(TemporalType.TIME)
-	@Min(value = 1)
-	private Calendar horacierre;
+	private Date horacierre;
 	
 	@JoinColumn(name="IDGUARDERIA", referencedColumnName = "IDGUARDERIA")//claves foraneas
 	@ManyToOne
@@ -71,19 +69,19 @@ public class Horario implements Serializable {
 		this.dia = dia;
 	}
 
-	public Calendar getHoraapertura() {
+	public Date getHoraapertura() {
 		return horaapertura;
 	}
 
-	public void setHoraapertura(Calendar horaapertura) {
+	public void setHoraapertura(Date horaapertura) {
 		this.horaapertura = horaapertura;
 	}
 
-	public Calendar getHoracierre() {
+	public Date getHoracierre() {
 		return horacierre;
 	}
 
-	public void setHoracierre(Calendar horacierre) {
+	public void setHoracierre(Date horacierre) {
 		this.horacierre = horacierre;
 	}
 

@@ -7,6 +7,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Calendar;
+import java.util.Date;
 
 @Entity
 @Table(name = "RESERVABABYSISTER")
@@ -26,13 +27,11 @@ public class ReservaBabySister implements Serializable {
 
     @Column(name = "HORAINICIO")
     @Temporal(TemporalType.TIME)
-    @Min(value = 1)
-    private Calendar horaInicio;
+    private Date horaInicio;
 
     @Column(name = "HORAFIN")
     @Temporal(TemporalType.TIME)
-    @Min(value = 1)
-    private Calendar horaFin;
+    private Date horaFin;
 
     @Size(max = 20)
     @Column(name = "ESTADO")
@@ -62,19 +61,19 @@ public class ReservaBabySister implements Serializable {
         this.fecha = fecha;
     }
 
-    public Calendar getHoraInicio() {
+    public Date getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(Calendar horaInicio) {
+    public void setHoraInicio(Date horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public Calendar getHoraFin() {
+    public Date getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(Calendar horaFin) {
+    public void setHoraFin(Date horaFin) {
         this.horaFin = horaFin;
     }
 

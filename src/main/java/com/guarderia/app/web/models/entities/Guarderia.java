@@ -44,10 +44,6 @@ public class Guarderia implements Serializable{
 	@NotEmpty
 	@Email
 	private String email;
-	
-	@JoinColumn(name="IDDIRECCION", referencedColumnName="IDDIRECCION")
-	@ManyToOne
-	private Direccion direccion;
 
 	@OneToMany(mappedBy="guarderia", fetch=FetchType.LAZY)
 	private List<Nivel> niveles;
@@ -72,6 +68,9 @@ public class Guarderia implements Serializable{
 	
 	@OneToMany(mappedBy="guarderia", fetch=FetchType.LAZY)
 	private List<Resena> resenas;
+
+	@OneToMany(mappedBy="guarderia", fetch= FetchType.LAZY)
+	private List<Direccion> direcciones;
 
 	public Guarderia() {
 	}
@@ -108,12 +107,12 @@ public class Guarderia implements Serializable{
 		this.email = email;
 	}
 
-	public Direccion getDireccion() {
-		return direccion;
+	public List<Direccion> getDirecciones() {
+		return direcciones;
 	}
 
-	public void setDireccion(Direccion direccion) {
-		this.direccion = direccion;
+	public void setDirecciones(List<Direccion> direcciones) {
+		this.direcciones = direcciones;
 	}
 
 	public List<Nivel> getNiveles() {

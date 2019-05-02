@@ -59,10 +59,10 @@ public class Direccion implements Serializable{
 	@JoinColumn(name="IDCIUDAD", referencedColumnName="IDCIUDAD")
 	@ManyToOne
 	private Ciudad ciudad;
-	
-	
-	@OneToMany(mappedBy="guarderia", fetch= FetchType.LAZY)
-	private List<Guarderia> guarderias;
+
+	@JoinColumn(name="IDGUARDERIA", referencedColumnName="IDGUARDERIA")
+	@ManyToOne
+	private Guarderia guarderia;
 	
 	
 	public Direccion() {
@@ -129,14 +129,11 @@ public class Direccion implements Serializable{
 		this.ciudad = ciudad;
 	}
 
-	public List<Guarderia> getGuarderias() {
-		return guarderias;
+	public Guarderia getGuarderia() {
+		return guarderia;
 	}
 
-	public void setGuarderias(List<Guarderia> guarderias) {
-		this.guarderias = guarderias;
+	public void setGuarderia(Guarderia guarderia) {
+		this.guarderia = guarderia;
 	}
-	
-	
-	
 }
